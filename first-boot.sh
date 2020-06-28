@@ -1,11 +1,11 @@
 #!/bin/bash
-#wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file> | bash
+#wget -O - https://raw.githubusercontent.com/paulikappi/first-boot/master/first-boot.sh | bash
 if [ -z "$1" ]; then
-  echo "Starting up visudo"
-  export EDITOR=$0 && sudo -E visudo
+  sudo echo "Starting up visudo"
+  sudo export EDITOR=$0 && sudo -E visudo
 else
-  echo "Changing sudoers"
-  echo "Defaults    timestamp_timeout=0" >> $1
+  sudo echo "Changing sudoers"
+  sudo echo "Defaults    timestamp_timeout=0" >> $1
 fi
-apt update
-apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
