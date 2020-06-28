@@ -23,6 +23,6 @@ else
   echo "Defaults    timestamp_timeout=0" >> $1
 fi
 
-apt update
-apt upgrade -y
-reboot now
+#apt update
+#apt upgrade -y
+#reboot now
